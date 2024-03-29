@@ -2,18 +2,18 @@ import styled from "styled-components";
 
 const Button = styled.div`
     width: 30px;
-    height: 12px;
-    border: 2px solid #3B9CFC;
+    height: 14px;
     font-size: 8px;
-    color: #3B9CFC;
-    border-radius: 20px;
+    font-weight: 700;
+    color: #000;
+    border-radius: 5px;
     display: flex;
     justify-content: center;
     align-items: center;
     padding: 0;
     cursor: pointer;
-    background: transparent;
-    margin-right: 20px;
+    background: #3B9CFC;
+    margin-right: 15px;
 `
 
 

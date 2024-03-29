@@ -1,12 +1,12 @@
 import styled from "styled-components";
 import { DialogContent, DialogOverlay } from '@reach/dialog';
 import { animated } from '@react-spring/web';
-import AtomLogo from '../../../assets/svg/CosmosLogo.webp'
-import ArrowWhite from '../../../assets/svg/ArrowWhite.webp'
+import QubeLogo from '../../../../assets/svg/QubeLogo.webp'
+import ArrowWhite from '../../../../assets/svg/ArrowWhite.webp'
 import ArrowBlack from '../../../assets/svg/ArrowBlack.webp'
-import loop from '../../../assets/svg/loop.svg'
-import { useToggleTheme } from "../../../hooks/useToggleTheme";
-import { useShowModalStake } from "../../../hooks/useShowModal";
+import loop from '../../../../assets/svg/loop.svg'
+import { useToggleTheme } from "../../../../hooks/useToggleTheme";
+import { useShowModalStake } from "../../../../hooks/useShowModal";
 
 
 const ModalDialogOverlay = animated(DialogOverlay);
@@ -56,8 +56,7 @@ const OpenButton = styled.button <{ TextColor: string }>`
     font-weight: 600;
     padding: 0;
     white-space: nowrap;
-    margin-left: 20px;
-    margin-top: 15px;
+    margin-left: 15px;
     display: flex;
     align-items: center;
     color: ${props => props.TextColor};
@@ -88,7 +87,6 @@ const SearchDiv = styled.div <{ inputBgColor: string, modalBorder: string }>`
     margin-bottom: 10px;
     border: ${props => props.modalBorder};
     width: 85%;
-    
 `
 
 const SearchBorder = styled.div <{ modalBorder: string }>`
@@ -121,6 +119,7 @@ const SearchToken = styled.input`
 const TokenLogo = styled.img`
     width: 40px;
     height: 40px;
+    border-radius: 50px;
     @media (max-width: 500px) {
         width: 35px;
         height: 35px;   
@@ -208,7 +207,7 @@ const StyledDialogContent = styled(ModalDialogContent) <{ modalBgColor: string, 
     }
 `
 
-export const SwapPageModal = () => {
+export const SwapPageModalTo = () => {
 
     const [theme, setTheme] = useToggleTheme()
     const [ShowModalStake, setShowModalStake] = useShowModalStake();
@@ -220,8 +219,8 @@ export const SwapPageModal = () => {
         <ModalBlock>
             <OpenButton TextColor={theme.TextColor} onClick={open}>
                 <div style={{ width: "200px", display: "flex", alignItems: "center" }}>
-                    <TokenLogo src={AtomLogo} />
-                    <TokenName TextColor={theme.TextColor}>ATOM</TokenName>
+                    <TokenLogo src={QubeLogo} />
+                    <TokenName TextColor={theme.TextColor}>QUBE</TokenName>
                     <ArrowLogo src={ArrowWhite} />
                 </div>
             </OpenButton>
@@ -245,8 +244,8 @@ export const SwapPageModal = () => {
                     </SearchBorder>
                     <TokenContrainer>
                         <Token>
-                            <TokenLogo src={AtomLogo} />
-                            <TokenName style={{fontSize: "20px"}} TextColor={theme.TextColor}>ATOM</TokenName>
+                            <TokenLogo src={QubeLogo} />
+                            <TokenName style={{fontSize: "20px"}} TextColor={theme.TextColor}>QUBE</TokenName>
                         </Token>
                         <AmountText TextColor={theme.TextColor}>0</AmountText>
                     </TokenContrainer>
