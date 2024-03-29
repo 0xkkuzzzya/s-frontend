@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { SwapPageHeader } from "../../Headers/PageHeaders/SwapPageHeader";
+import { SwapPageHeader } from "../../Header/PageHeaders/SwapPageHeader";
 import { SwapPageFieldFrom } from "./Field/SwapPageFieldFrom";
 import { SwapPageFieldTo } from "./Field/SwapPageFieldTo";
 import { SwapPageInfo } from "./SwapPageInfo";
