@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import { SwapPage } from "./Pages/Swap/SwapPage";
-import { MainHeader } from "./Headers/MainHeader/MainHeader";
+import { MainHeader } from "./Headers/MainHeader/MainHeader.tsx";
 
 const Container = styled.div`
     width: 100%;
@@ -10,10 +10,10 @@ const Container = styled.div`
 
 
 export const MainIndex = () => {
-    return(
+    return (
         <Container>
-            <MainHeader/>
-            <SwapPage/>
+            <MainHeader />
+            <SwapPage />
         </Container>
     )
 }
