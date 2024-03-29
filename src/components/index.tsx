@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import { SwapPage } from "./Pages/Swap/SwapPage";
-import { MainHeader } from "./Headers/MainHeader/MainHeader.tsx";
+import { MainHeader } from "./Headers/MainHeader/MainHeader";
 
 const Container = styled.div`
     width: 100%;
