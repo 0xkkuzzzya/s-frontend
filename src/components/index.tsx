@@ -6,7 +6,7 @@ import { useToggleTheme } from "../hooks/useToggleTheme";
 
 const Container = styled.div <{backgroundColor: string}>`
     width: 100%;
-    height: 100vh;
+    height: calc(100vh - 80px);
     display: flex;
     flex-direction: column;
     background: ${props => props.backgroundColor};
