@@ -9,7 +9,6 @@ import { SwapFieldButton } from "../../Buttons/PageButtons/SwapPage/SwapFieldBut
 
 const Container = styled.div`
     width: 400px;
-    height: 100%;
     margin: 0 auto;
     margin-top: 50px;
     display: flex;

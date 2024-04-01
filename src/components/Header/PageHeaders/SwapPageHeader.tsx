@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import { SwapPageLink } from "./SwapPageLink";
+import { useToggleTheme } from "../../../hooks/useToggleTheme";
 
 const Header = styled.div`
     width: 100%;
@@ -8,15 +9,15 @@ const Header = styled.div`
     flex-direction: column;
 `
 
-const HeaderText = styled.a`
+const HeaderText = styled.a <{TextColor: string}>`
     font-size: 26px;
-    color: #fff;
+    color: ${props => props.TextColor};
     font-weight: 500;
 `
 
-const HeaderDescription = styled.a`
+const HeaderDescription = styled.a <{TextColor: string}>`
     font-size: 14px;
-    color: #fff;
+    color: ${props => props.TextColor};
     font-weight: 500;
     margin-top: 20px;
 `
@@ -25,12 +26,14 @@ const HeaderDescription = styled.a`
 export const SwapPageHeader = () => {
 
     const text = "Switch to Orderbook >";
+    
+    const [theme, setTheme] = useToggleTheme()
 
     return(
         <Header>
-            <HeaderText>Swap</HeaderText>
+            <HeaderText TextColor={theme.TextColor}>Swap</HeaderText>
             <SwapPageLink to="/orderbook">
-                <HeaderDescription>{text}</HeaderDescription>
+                <HeaderDescription TextColor={theme.TextColor}>{text}</HeaderDescription>
             </SwapPageLink>
         </Header>
     )

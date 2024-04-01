@@ -29,10 +29,13 @@ export const SwapPageLink = ({children, to}: Props) => {
 
     const [theme, setTheme] = useToggleTheme()
 
+    const match = useMatch(to)
+
     return(
         <LinkBLock 
         to={to}
         style={{
+            color: match ? theme.active == true ? '#fff' : '#555' :  theme.active == true ? '#666' : '#aaa',
             transition: '.2s ease-in-out',
         }}
         >

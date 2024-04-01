@@ -5,16 +5,13 @@ import { MainHeader } from "./Header/MainHeader/MainHeader";
 import { useToggleTheme } from "../hooks/useToggleTheme";
 
 const Container = styled.div <{backgroundColor: string}>`
-    width: 100%;
-    height: calc(100vh - 80px);
     display: flex;
     flex-direction: column;
     background: ${props => props.backgroundColor};
 `
 
 const PageContainer = styled.div`
-    width: 100%;
-    margin-top: 50px;
+    height: calc(-80px + 100vh);
     display: flex;
     justify-content: center;
 `
