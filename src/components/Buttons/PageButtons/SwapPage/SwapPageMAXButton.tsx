@@ -12,8 +12,8 @@ const Button = styled.div`
     align-items: center;
     padding: 0;
     cursor: pointer;
-    background: #3B9CFC;
-    margin-right: 15px;
+    background: linear-gradient(to right, #6db8ff, #38a3ff);
+    margin-right: 20px;
 `
 
 

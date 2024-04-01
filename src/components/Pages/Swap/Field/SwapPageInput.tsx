@@ -8,9 +8,8 @@ const Input = styled.input <{TextColor: string}>`
     border-radius: 20px;
     background: transparent;
     color: ${props => props.TextColor};
-    text-align: right;
-    font-size: 20px;
-    padding-right: 15px;
+    font-size: 30px;
+    padding-left: 30px;
     font-weight: 700;
 `
 

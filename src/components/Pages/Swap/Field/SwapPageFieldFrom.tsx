@@ -20,21 +20,30 @@ const Avaible = styled.div`
     margin-top: auto;
     display: flex;
     justify-content: space-between;
-    margin-bottom: 7px;
+    align-items: center;
+    margin-bottom: 20px;
 `
 
 const AvaibleText = styled.a`
-    font-size: 12px;
+    font-size: 13px;
     color: #888888;
     font-weight: 500;
-    margin-left: 15px;
+    margin-left: auto;
+    margin-right: 5px;
+`
+
+const AvaibleDollar = styled.a`
+    font-size: 15px;
+    color: #888888;
+    font-weight: 500;
+    margin-left: 30px;
 `
 
 const Container = styled.div`
     display: flex;
     align-items: center;
     width: 100%;
-    margin-top: 15px;
+    margin-top: 20px;
 `
 
 
@@ -46,11 +55,12 @@ export const SwapPageFieldFrom = () => {
     return(
         <Field BorderField={theme.BorderField}>
             <Container>
-                <SwapPageModalFrom/>
                 <SwapPageInput/>
+                <SwapPageModalFrom/>
             </Container>
             <Avaible>
-                <AvaibleText>Avaible: 0 ATOM</AvaibleText>
+                <AvaibleDollar>$0</AvaibleDollar>
+                <AvaibleText>0 ATOM</AvaibleText>
                 <SwapPageMAXButton/>
             </Avaible>
         </Field>

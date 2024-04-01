@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { SwapPageLink } from "./SwapPageLink";
 
 const Header = styled.div`
     width: 100%;
@@ -22,10 +23,15 @@ const HeaderDescription = styled.a`
 
 
 export const SwapPageHeader = () => {
+
+    const text = "Switch to Orderbook >";
+
     return(
         <Header>
             <HeaderText>Swap</HeaderText>
-            <HeaderDescription>Switch to Orderbook</HeaderDescription>
+            <SwapPageLink to="/orderbook">
+                <HeaderDescription>{text}</HeaderDescription>
+            </SwapPageLink>
         </Header>
     )
 }

@@ -9,14 +9,9 @@ const LinkBLock = styled(LinkText)`
     font-weight: 700;
     outline: none;
     font-size: 15px;
-    padding: 10px 20px;
-    text-align: center;
+    margin-top: 10px;
     @media (max-width: 1110px) {
         font-size: 15px;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        padding: 0px;
     }
     @media (max-width: 730px) {
         font-size: 13px;
@@ -30,17 +25,14 @@ interface Props {
     children: ReactNode;
 }
 
-export const MainHeaderLink = ({children, to}: Props) => {
+export const SwapPageLink = ({children, to}: Props) => {
 
     const [theme, setTheme] = useToggleTheme()
-
-    const match = useMatch(to)
 
     return(
         <LinkBLock 
         to={to}
         style={{
-            color: match ? theme.active == true ? '#fff' : '#555' :  theme.active == true ? '#666' : '#aaa',
             transition: '.2s ease-in-out',
         }}
         >

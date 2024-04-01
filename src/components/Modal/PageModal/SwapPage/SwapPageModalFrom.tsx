@@ -2,11 +2,9 @@ import styled from "styled-components";
 import { DialogContent, DialogOverlay } from '@reach/dialog';
 import { animated } from '@react-spring/web';
 import AtomLogo from '../../../../assets/svg/CosmosLogo.webp'
-import ArrowWhite from '../../../../assets/svg/ArrowWhite.webp'
-import ArrowBlack from '../../../../assets/svg/ArrowBlack.webp'
 import loop from '../../../../assets/svg/loop.svg'
 import { useToggleTheme } from "../../../../hooks/useToggleTheme";
-import { useShowModalStake } from "../../../../hooks/useShowModal";
+import { useShowModalSwapFrom } from "../../../../hooks/useShowModal";
 
 
 const ModalDialogOverlay = animated(DialogOverlay);
@@ -46,7 +44,6 @@ const CloseButton = styled.button <{ TextColor: string }>`
 `
 
 const OpenButton = styled.button <{ TextColor: string }>`
-    width: 130px;
     background:transparent;
     border:none;
     outline: none;
@@ -56,7 +53,7 @@ const OpenButton = styled.button <{ TextColor: string }>`
     font-weight: 600;
     padding: 0;
     white-space: nowrap;
-    margin-left: 15px;
+    margin-right: 20px;
     display: flex;
     align-items: center;
     color: ${props => props.TextColor};
@@ -117,12 +114,8 @@ const SearchToken = styled.input`
 `
 
 const TokenLogo = styled.img`
-    width: 40px;
-    height: 40px;
-    @media (max-width: 500px) {
-        width: 35px;
-        height: 35px;   
-    }
+    width: 35px;
+    height: 35px;  
 `
 
 const TokenName = styled.a <{ TextColor: string }>`
@@ -131,23 +124,7 @@ const TokenName = styled.a <{ TextColor: string }>`
     font-weight: 500;
     margin-left: 10px;
     @media (max-width: 500px) {
-        font-size: 18px;
         margin-top: 2px;   
-    }
-`
-
-const ArrowLogo = styled.svg <{ ArrrowColor: string }>`
-    width: 12px;
-    height: 12px;
-    margin-left: 5px;
-    margin-top: -2px;
-    background: url(${props => props.ArrrowColor});
-    background-repeat: no-repeat;
-    background-size: contain;
-    @media (max-width: 500px) {
-        width: 10px;
-        height: 10px;
-        margin-top: 2px;
     }
 `
 
@@ -210,21 +187,20 @@ const StyledDialogContent = styled(ModalDialogContent) <{ modalBgColor: string, 
 export const SwapPageModalFrom = () => {
 
     const [theme, setTheme] = useToggleTheme()
-    const [ShowModalStake, setShowModalStake] = useShowModalStake();
+    const [ShowModalSwapFrom, setShowModalSwapFrom] = useShowModalSwapFrom();
 
-    const open = () => { setShowModalStake({ b: true }) };
-    const close = () => { setShowModalStake({ b: false }) };
+    const open = () => { setShowModalSwapFrom({ b: true }) };
+    const close = () => { setShowModalSwapFrom({ b: false }) };
 
     return (
         <ModalBlock>
             <OpenButton TextColor={theme.TextColor} onClick={open}>
-                <div style={{ width: "200px", display: "flex", alignItems: "center" }}>
+                <div style={{ display: "flex", alignItems: "center" }}>
                     <TokenLogo src={AtomLogo} />
                     <TokenName TextColor={theme.TextColor}>ATOM</TokenName>
-                    <ArrowLogo ArrrowColor={theme.active == true ? ArrowWhite : ArrowBlack} />
                 </div>
             </OpenButton>
-            <StyledDialogOvelay isOpen={ShowModalStake.b} onDismiss={close}>
+            <StyledDialogOvelay isOpen={ShowModalSwapFrom.b} onDismiss={close}>
                 <StyledDialogContent modalBgColor={theme.modalBgColor} modalBorder={theme.modalBorder}>
                     <CloseDiv>
                         <ModalTextBlock>
@@ -245,7 +221,7 @@ export const SwapPageModalFrom = () => {
                     <TokenContrainer>
                         <Token>
                             <TokenLogo src={AtomLogo} />
-                            <TokenName style={{fontSize: "20px"}} TextColor={theme.TextColor}>йцуйцу</TokenName>
+                            <TokenName style={{fontSize: "20px"}} TextColor={theme.TextColor}>ATOM</TokenName>
                         </Token>
                         <AmountText TextColor={theme.TextColor}>0</AmountText>
                     </TokenContrainer>

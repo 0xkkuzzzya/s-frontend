@@ -6,7 +6,7 @@ import ArrowWhite from '../../../../assets/svg/ArrowWhite.webp'
 import ArrowBlack from '../../../../assets/svg/ArrowBlack.webp'
 import loop from '../../../../assets/svg/loop.svg'
 import { useToggleTheme } from "../../../../hooks/useToggleTheme";
-import { useShowModalStake } from "../../../../hooks/useShowModal";
+import { useShowModalSwapTo } from "../../../../hooks/useShowModal";
 
 
 const ModalDialogOverlay = animated(DialogOverlay);
@@ -46,7 +46,6 @@ const CloseButton = styled.button <{ TextColor: string }>`
 `
 
 const OpenButton = styled.button <{ TextColor: string }>`
-    width: 130px;
     background:transparent;
     border:none;
     outline: none;
@@ -56,7 +55,7 @@ const OpenButton = styled.button <{ TextColor: string }>`
     font-weight: 600;
     padding: 0;
     white-space: nowrap;
-    margin-left: 15px;
+    margin-right: 20px;
     display: flex;
     align-items: center;
     color: ${props => props.TextColor};
@@ -117,13 +116,16 @@ const SearchToken = styled.input`
 `
 
 const TokenLogo = styled.img`
-    width: 40px;
-    height: 40px;
+    width: 35px;
+    height: 35px; 
     border-radius: 50px;
-    @media (max-width: 500px) {
-        width: 35px;
-        height: 35px;   
-    }
+`
+
+const Name = styled.a <{ TextColor: string }>`
+    font-size: 22px;
+    color: ${props => props.TextColor};
+    font-weight: 500;
+    margin-left: 10px;
 `
 
 const TokenName = styled.a <{ TextColor: string }>`
@@ -211,21 +213,20 @@ const StyledDialogContent = styled(ModalDialogContent) <{ modalBgColor: string, 
 export const SwapPageModalTo = () => {
 
     const [theme, setTheme] = useToggleTheme()
-    const [ShowModalStake, setShowModalStake] = useShowModalStake();
+    const [ShowModalSwapTo, setShowModalSwapTo] = useShowModalSwapTo();
 
-    const open = () => { setShowModalStake({ b: true }) };
-    const close = () => { setShowModalStake({ b: false }) };
+    const open = () => { setShowModalSwapTo({ b: true }) };
+    const close = () => { setShowModalSwapTo({ b: false }) };
 
     return (
         <ModalBlock>
             <OpenButton TextColor={theme.TextColor} onClick={open}>
-                <div style={{ width: "200px", display: "flex", alignItems: "center" }}>
+                <div style={{ display: "flex", alignItems: "center" }}>
                     <TokenLogo src={QubeLogo} />
-                    <TokenName TextColor={theme.TextColor}>QUBE</TokenName>
-                    <ArrowLogo ArrrowColor={theme.active == true ? ArrowWhite : ArrowBlack} />
+                    <Name TextColor={theme.TextColor}>QUBE</Name>
                 </div>
             </OpenButton>
-            <StyledDialogOvelay isOpen={ShowModalStake.b} onDismiss={close}>
+            <StyledDialogOvelay isOpen={ShowModalSwapTo.b} onDismiss={close}>
                 <StyledDialogContent modalBgColor={theme.modalBgColor} modalBorder={theme.modalBorder}>
                     <CloseDiv>
                         <ModalTextBlock>
@@ -246,7 +247,7 @@ export const SwapPageModalTo = () => {
                     <TokenContrainer>
                         <Token>
                             <TokenLogo src={QubeLogo} />
-                            <TokenName style={{fontSize: "20px"}} TextColor={theme.TextColor}>фывфы</TokenName>
+                            <TokenName style={{fontSize: "20px"}} TextColor={theme.TextColor}>QUBE</TokenName>
                         </Token>
                         <AmountText TextColor={theme.TextColor}>0</AmountText>
                     </TokenContrainer>

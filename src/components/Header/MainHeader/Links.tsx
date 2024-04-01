@@ -18,20 +18,20 @@ const BlockLink = styled.nav`
     height: 60px;
     justify-content: center;
     margin-right: 30px;
-    margin-left: 203px;
+    margin-left: 170px;
 `
 
 const NavBlock = styled.div <{ navBlockBg: string }>`
-    width: 100%;
+    width: 90%;
     display: flex;
     justify-content: center;
     flex-direction: column;
     background: ${props => props.navBlockBg};
     transition: padding-bottom .3s ease-in-out;
+    border-radius: 20px;
 `
 
 const LinkBlock = styled.div`
-    width: 152px;
     margin-top: -5px;
     @media (min-width: 730px){
         flex-grow: 0;
@@ -44,12 +44,12 @@ const MobLinkBlock = styled.div`
     width: 150px;
     display: flex;
     outline: none;
-    margin: 0 20px;
     border-radius: 10px;
     display: flex;
     flex-direction: column;
     align-items: center;
     text-align: center;
+    margin-top: 5px;
     @media (min-width: 730px){
         flex-grow: 0;
         display: flex;
@@ -58,7 +58,7 @@ const MobLinkBlock = styled.div`
 
 const MobBlockLink = styled.nav`
     width: 100%;
-    height: 60px;
+    height: 70px;
     display: flex;
     transition: max-height .3s ease-in-out;
     justify-content: center;
@@ -69,16 +69,17 @@ const LinkMobBlock = styled.div`
     width: 100%;
     display: flex;
     justify-content: center;
+    align-items: center;
     flex-direction: column;
     position: fixed;
     left: 0;
     right: 0;
-    bottom: 0;
+    bottom: 10px;
 `
 
 const WalletLogo = styled.svg <{ icon: string }>`
-    width: 20px;
-    height: 20px;
+    width: 25px;
+    height: 25px;
     background: url(${props => props.icon});
     background-repeat: no-repeat;
     background-size: contain;
