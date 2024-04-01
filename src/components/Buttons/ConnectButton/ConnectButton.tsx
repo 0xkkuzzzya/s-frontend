@@ -10,7 +10,6 @@ const ButtonBlock = styled.div`
     margin-right: 25px;
     cursor: pointer;
     color: #fff;
-    margin-left: auto;
     margin-right: 60px;
     @media (max-width: 1050px) {
         margin-left: 0;

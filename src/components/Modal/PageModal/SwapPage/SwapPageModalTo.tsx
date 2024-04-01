@@ -3,7 +3,7 @@ import { DialogContent, DialogOverlay } from '@reach/dialog';
 import { animated } from '@react-spring/web';
 import QubeLogo from '../../../../assets/svg/QubeLogo.webp'
 import ArrowWhite from '../../../../assets/svg/ArrowWhite.webp'
-import ArrowBlack from '../../../assets/svg/ArrowBlack.webp'
+import ArrowBlack from '../../../../assets/svg/ArrowBlack.webp'
 import loop from '../../../../assets/svg/loop.svg'
 import { useToggleTheme } from "../../../../hooks/useToggleTheme";
 import { useShowModalStake } from "../../../../hooks/useShowModal";
@@ -137,11 +137,12 @@ const TokenName = styled.a <{ TextColor: string }>`
     }
 `
 
-const ArrowLogo = styled.img`
+const ArrowLogo = styled.svg <{ ArrrowColor: string }>`
     width: 12px;
     height: 12px;
     margin-left: 5px;
     margin-top: -2px;
+    background: url(${props => props.ArrrowColor});
     background-repeat: no-repeat;
     background-size: contain;
     @media (max-width: 500px) {
@@ -221,7 +222,7 @@ export const SwapPageModalTo = () => {
                 <div style={{ width: "200px", display: "flex", alignItems: "center" }}>
                     <TokenLogo src={QubeLogo} />
                     <TokenName TextColor={theme.TextColor}>QUBE</TokenName>
-                    <ArrowLogo src={ArrowWhite} />
+                    <ArrowLogo ArrrowColor={theme.active == true ? ArrowWhite : ArrowBlack} />
                 </div>
             </OpenButton>
             <StyledDialogOvelay isOpen={ShowModalStake.b} onDismiss={close}>
@@ -245,7 +246,7 @@ export const SwapPageModalTo = () => {
                     <TokenContrainer>
                         <Token>
                             <TokenLogo src={QubeLogo} />
-                            <TokenName style={{fontSize: "20px"}} TextColor={theme.TextColor}>QUBE</TokenName>
+                            <TokenName style={{fontSize: "20px"}} TextColor={theme.TextColor}>фывфы</TokenName>
                         </Token>
                         <AmountText TextColor={theme.TextColor}>0</AmountText>
                     </TokenContrainer>

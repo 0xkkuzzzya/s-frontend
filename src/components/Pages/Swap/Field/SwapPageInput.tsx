@@ -1,12 +1,13 @@
 import styled from "styled-components";
+import { useToggleTheme } from "../../../../hooks/useToggleTheme";
 
-const Input = styled.input`
+const Input = styled.input <{TextColor: string}>`
     width: 100%;
     height: 100%;
     border: none;
     border-radius: 20px;
     background: transparent;
-    color: #fff;
+    color: ${props => props.TextColor};
     text-align: right;
     font-size: 20px;
     padding-right: 15px;
@@ -15,7 +16,10 @@ const Input = styled.input`
 
 
 export const SwapPageInput = () => {
+
+    const [theme, setTheme] = useToggleTheme()
+
     return(
-        <Input placeholder="0"></Input>
+        <Input TextColor={theme.TextColor} placeholder="0"></Input>
     )
 }

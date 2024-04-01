@@ -4,6 +4,7 @@ import { SwapPageFieldFrom } from "./Field/SwapPageFieldFrom";
 import { SwapPageFieldTo } from "./Field/SwapPageFieldTo";
 import { SwapPageInfo } from "./SwapPageInfo";
 import { SwapPageConfirm } from "../../Buttons/PageButtons/SwapPage/SwapPageConfirm";
+import { useToggleTheme } from "../../../hooks/useToggleTheme";
 
 const Container = styled.div`
     width: 400px;
@@ -18,11 +19,11 @@ const Container = styled.div`
     }
 `
 
-const SwapFieldButton = styled.div`
+const SwapFieldButton = styled.div <{SwapButton: string, BorderField: string}>`
     width: 40px;
     height: 40px;
-    border: 2px solid #3A3A3A;
-    background: #161616;
+    border: ${props => props.BorderField};
+    background: ${props => props.SwapButton};
     position: absolute;
     margin-top: 11.4em;
     border-radius: 15px;
@@ -34,11 +35,14 @@ const SwapFieldButton = styled.div`
 `
 
 export const SwapPage = () => {
+
+    const [theme, setTheme] = useToggleTheme()
+
     return(
         <Container>
             <SwapPageHeader/>
             <SwapPageFieldFrom/>
-            <SwapFieldButton></SwapFieldButton>
+            <SwapFieldButton BorderField={theme.BorderField} SwapButton={theme.SwapButton}/>
             <SwapPageFieldTo/>
             <SwapPageInfo/>
             <SwapPageConfirm/>
