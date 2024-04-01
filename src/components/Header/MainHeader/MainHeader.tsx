@@ -29,10 +29,10 @@ export const MainHeader = () => {
     const [theme, setTheme] = useToggleTheme()
 
     const isDes = useMediaQuery({
-        query: "(min-device-width: 1050px)",
+        query: "(min-device-width: 930px)",
     });
     const isMob = useMediaQuery({
-        query: "(max-device-width: 1050px)",
+        query: "(max-device-width: 930px)",
     });
 
     return(

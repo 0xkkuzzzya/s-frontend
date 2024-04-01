@@ -12,7 +12,6 @@ const SwapField = styled.div <{SwapButton: string, BorderField: string}>`
     @media (max-width: 500px) {
         width: 40px;
         height: 40px;
-        margin-top: 11.5em;
     }
 `
 
