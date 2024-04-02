@@ -15,7 +15,7 @@ function App() {
 	}, [])
 
 	return (
-		<div style={{overflow: "hidden"}}>
+		<div>
 			<MainIndex />
 		</div>
 	);

@@ -12,6 +12,7 @@ const Container = styled.div <{backgroundColor: string}>`
     display: flex;
     flex-direction: column;
     background: ${props => props.backgroundColor};
+    overflow: hidden;
 `
 
 const PageContainer = styled.div`

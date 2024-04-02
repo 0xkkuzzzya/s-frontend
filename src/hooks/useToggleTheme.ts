@@ -6,7 +6,6 @@ interface Theme {
   headerColor: string;
   button: string;
   TextColor: string;
-  homePageGreyText: string;
   FieldColor: string;
   BorderField: string;
   modalBgColor: string;
@@ -31,7 +30,6 @@ export const ThemeWhiteState: Theme = {
     headerColor: '#ECEBEB' ,
     button: 'linear-gradient(to right, rgb(119, 191, 249), rgb(45, 150, 255))',
     TextColor: 'black',
-    homePageGreyText: '#BABABA',
     FieldColor: '#1a1a1a',
     BorderField: '1px solid #EEEEEE',
     modalBgColor: 'rgb(245,245,245)',
@@ -56,7 +54,6 @@ export const ThemeBlackState: Theme = {
   headerColor: '#202020' ,
   button: 'linear-gradient(to right, rgb(119, 191, 249), rgb(45, 150, 255))',
   TextColor: 'white',
-  homePageGreyText: '#aaa',
   FieldColor: '#1a1a1a',
   BorderField: '1px solid #2b2b2d',
   modalBgColor: '#282828',
