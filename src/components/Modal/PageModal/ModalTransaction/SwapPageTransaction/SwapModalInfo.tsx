@@ -22,38 +22,26 @@ const InfoText = styled.h1`
     margin: 0;
 `
 
-const LTV = styled.h1`
-    font-size: 16px;
-`
-
-const LTVInfo = styled.h1 <{TextColor: string}>`
-    font-size: 16px;
-    color: ${props => props.TextColor};
-`
-
 const BlockInfo = styled.div`
     width: 90%;
     display: flex;
     justify-content: space-between;
     color: #BABABA;
     align-items: center;
+    margin-top: 10px;
 `
 
 export const SwapModalInfo = () => {
     return(
         <InfoBlock>
             <BlockInfo>
-                <InfoText>Total Deposit</InfoText>
+                <InfoText>Route</InfoText>
+                <InfoText>0</InfoText>
             </BlockInfo>
             <BlockInfo>
-                <InfoText>Total Borrow</InfoText>
+                <InfoText>Max transaction fee</InfoText>
+                <InfoText>0</InfoText>
             </BlockInfo>
-            <BlockInfo>
-                <InfoText>Borrow Interest Rate</InfoText>
-            </BlockInfo>            
-            <LTVBlock>
-                <LTV>Risk Rate</LTV>
-            </LTVBlock>
         </InfoBlock>
     )
 }

@@ -5,6 +5,7 @@ import { useShowModalSwapTransaction, useShowWalletModal } from '../../../../../
 import { useToggleTheme } from '../../../../../hooks/useToggleTheme';
 import { Modal } from '../../Modal';
 import { useWallet } from '../../../../../hooks/useWallet';
+import { SwapModalContent } from './SwapModalContent';
 const ModalDialogOverlay = animated(DialogOverlay);
 const StyledDialogOvelay = styled(ModalDialogOverlay)`
     &[data-reach-dialog-overlay] {
@@ -136,13 +137,14 @@ export const SwapModalTransaction = () => {
         <>
             <CloseDiv>
                 <HeaderBlock>
-                    <HeaderText TextColor={theme.TextColor}>Confirm Stake</HeaderText>
+                    <HeaderText TextColor={theme.TextColor}>Confirm swap</HeaderText>
                 </HeaderBlock>
                 <CloseButton TextColor={theme.TextColor}>
                     <a style={{ cursor: "pointer" }} onClick={close} aria-hidden>×</a>
                 </CloseButton>
             </CloseDiv>
             <ContentDiv>
+                <SwapModalContent/>
             </ContentDiv>
         </>
 

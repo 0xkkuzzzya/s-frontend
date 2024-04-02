@@ -1,7 +1,9 @@
 import styled from "styled-components";
-import USDC from '../../../assets/svg/USDC Logo.webp'
+import USDC from '../../../../../assets/svg/USDC Logo.webp'
+import Atom from '../../../../../assets/svg/AtomLogo.png'
 import { useToggleTheme } from "../../../../../hooks/useToggleTheme";
 import { SwapModalInfo } from "./SwapModalInfo";
+import { SwapPageConfirm } from "../../../../Buttons/PageButtons/SwapPage/SwapPageConfirm";
 
 const Container = styled.div`
     width: 100%;
@@ -87,6 +89,18 @@ export const SwapModalContent = () => {
         <Container>
             <Block>
                 <TextBlock>
+                    <Text TextColor={theme.TextColor}>You give</Text>
+                </TextBlock>
+                <Field>
+                    <LogoBlock>
+                        <TokenLogo src={Atom}></TokenLogo>
+                        <TokenName TextColor={theme.TextColor}>ATOM</TokenName>
+                    </LogoBlock>
+                    <AmountBlock>
+                        <AmountToken TextColor={theme.TextColor}>35</AmountToken>
+                    </AmountBlock>
+                </Field>
+                <TextBlock>
                     <Text TextColor={theme.TextColor}>You'll get</Text>
                 </TextBlock>
                 <Field>
@@ -100,6 +114,7 @@ export const SwapModalContent = () => {
                 </Field>
                 <GradientBlock/>
                 <SwapModalInfo/>
+                <SwapPageConfirm/>
             </Block>
         </Container>
     )
