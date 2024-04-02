@@ -11,7 +11,7 @@ const Cotainer = styled.div`
 const Info = styled.a`
     color: #BABABA;
     font-weight: 400;
-    font-size: 17px;
+    font-size: 15px;
 `
 
 

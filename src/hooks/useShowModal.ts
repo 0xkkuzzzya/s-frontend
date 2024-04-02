@@ -11,4 +11,5 @@ export const [useShowModalTo] = createStore(defaultState);
 export const [useShowWalletModal] = createStore(defaultState);
 export const [useShowModalSwapFrom] = createStore(defaultState);
 export const [useShowModalSwapTo] = createStore(defaultState);
+export const [useShowModalSwapTransaction] = createStore(defaultState);
 export const [useShowAlert] = createStore(defaultState);

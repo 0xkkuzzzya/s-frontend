@@ -3,9 +3,8 @@ import { SwapPageHeader } from "../../Header/PageHeaders/SwapPageHeader";
 import { SwapPageFieldFrom } from "./Field/SwapPageFieldFrom";
 import { SwapPageFieldTo } from "./Field/SwapPageFieldTo";
 import { SwapPageInfo } from "./SwapPageInfo";
-import { SwapPageConfirm } from "../../Buttons/PageButtons/SwapPage/SwapPageConfirm";
-import { useToggleTheme } from "../../../hooks/useToggleTheme";
 import { SwapFieldButton } from "../../Buttons/PageButtons/SwapPage/SwapFieldButtun";
+import { SwapModalTransaction } from "../../Modal/PageModal/ModalTransaction/SwapPageTransaction/SwapModalTransaction";
 
 const Container = styled.div`
     width: 400px;
@@ -29,7 +28,7 @@ export const SwapPage = () => {
             <SwapFieldButton/>
             <SwapPageFieldTo/>
             <SwapPageInfo/>
-            <SwapPageConfirm/>
+            <SwapModalTransaction/>
         </Container>
     )
 }

@@ -19,7 +19,6 @@ const HeaderDescription = styled.a <{TextColor: string}>`
     font-size: 14px;
     color: ${props => props.TextColor};
     font-weight: 500;
-    margin-top: 20px;
 `
 
 

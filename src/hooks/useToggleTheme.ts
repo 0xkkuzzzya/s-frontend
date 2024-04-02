@@ -22,6 +22,7 @@ interface Theme {
   ModalHoverColor: string;
   ToField: string;
   SwapButton: string;
+  modalHover: string
 }
 
 export const ThemeWhiteState: Theme = { 
@@ -45,7 +46,8 @@ export const ThemeWhiteState: Theme = {
     navBlockBg: '#ECEBEB',
     ModalHoverColor: '#ECECEC',
     ToField: '#efefef',
-    SwapButton: "#fff"
+    SwapButton: "#fff",
+    modalHover: '#ECECEC',
 };
 
 export const ThemeBlackState: Theme = { 
@@ -56,7 +58,7 @@ export const ThemeBlackState: Theme = {
   TextColor: 'white',
   homePageGreyText: '#aaa',
   FieldColor: '#1a1a1a',
-  BorderField: '1px solid #3A3A3A',
+  BorderField: '1px solid #2b2b2d',
   modalBgColor: '#282828',
   modalBorder: '2px solid #333',
   searchBg: '#222',
@@ -68,8 +70,9 @@ export const ThemeBlackState: Theme = {
   walletHover: '#333333',
   navBlockBg: '#202020',
   ModalHoverColor: '#333333',
-  ToField: '#202020',
-  SwapButton: "#161616"
+  ToField: '#1b1b1b',
+  SwapButton: "#161616",
+  modalHover: '#222',
 };
 
 

@@ -7,7 +7,7 @@ const SwapField = styled.div <{SwapButton: string, BorderField: string}>`
     border: ${props => props.BorderField};
     background: ${props => props.SwapButton};
     position: absolute;
-    margin-top: 10.85em;
+    margin-top: 11.5em;
     border-radius: 15px;
     @media (max-width: 500px) {
         width: 40px;

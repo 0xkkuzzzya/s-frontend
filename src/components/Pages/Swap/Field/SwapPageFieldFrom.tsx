@@ -6,10 +6,10 @@ import { useToggleTheme } from "../../../../hooks/useToggleTheme";
 
 const Field = styled.div <{BorderField: string}>`
     width: 100%;
-    height: 100px;
+    height: 120px;
     border: ${props => props.BorderField};
     border-radius: 20px;
-    margin-top: 30px;
+    margin-top: 10px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -21,7 +21,7 @@ const Avaible = styled.div`
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-bottom: 20px;
+    margin-bottom: 18px;
 `
 
 const AvaibleText = styled.a`
@@ -43,7 +43,7 @@ const Container = styled.div`
     display: flex;
     align-items: center;
     width: 100%;
-    margin-top: 20px;
+    margin-top: 30px;
 `
 
 

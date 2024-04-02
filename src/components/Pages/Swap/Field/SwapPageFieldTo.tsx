@@ -4,7 +4,7 @@ import { useToggleTheme } from "../../../../hooks/useToggleTheme";
 
 const Field = styled.div <{BorderField: string, ToField: string}>`
     width: 100%;
-    height: 65px;
+    height: 70px;
     background: ${props => props.ToField};
     border: ${props => props.BorderField};
     border-radius: 20px;
@@ -14,9 +14,9 @@ const Field = styled.div <{BorderField: string, ToField: string}>`
     align-items: center;
 `
 
-const AmountOut = styled.a <{TextColor: string}>`
-    color: ${props => props.TextColor};
-    font-size: 20px;
+const AmountOut = styled.a `
+    color: #888888;
+    font-size: 25px;
     font-weight: 700;
     margin-left: 30px;
 `
@@ -28,7 +28,7 @@ export const SwapPageFieldTo = () => {
 
     return(
         <Field BorderField={theme.BorderField} ToField={theme.ToField}>
-            <AmountOut TextColor={theme.TextColor}>0</AmountOut>
+            <AmountOut>0</AmountOut>
             <SwapPageModalTo/>
         </Field>
     )

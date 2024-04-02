@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import { DialogContent, DialogOverlay } from '@reach/dialog';
 import { animated } from '@react-spring/web';
-import AtomLogo from '../../../../assets/svg/CosmosLogo.webp'
+import AtomLogo from '../../../../assets/svg/AtomLogo.webp'
 import loop from '../../../../assets/svg/loop.svg'
 import { useToggleTheme } from "../../../../hooks/useToggleTheme";
 import { useShowModalSwapFrom } from "../../../../hooks/useShowModal";
@@ -43,20 +43,25 @@ const CloseButton = styled.button <{ TextColor: string }>`
     outline: none;
 `
 
-const OpenButton = styled.button <{ TextColor: string }>`
-    background:transparent;
+const OpenButton = styled.button <{TextColor: string, modalHover: string}>`
+    background: transparent;
     border:none;
     outline: none;
     cursor: pointer;
     font-family: 'Inter', sans-serif;
     font-size: 18px;
     font-weight: 600;
-    padding: 0;
+    padding: 7px 10px;
+    border-radius: 50px;
     white-space: nowrap;
     margin-right: 20px;
     display: flex;
     align-items: center;
+    transition: all .2s ease-in-out;
     color: ${props => props.TextColor};
+    &:hover {
+        background: ${props => props.modalHover};
+    }
 `
 
 const CloseButtonBlock = styled.div`
@@ -194,7 +199,7 @@ export const SwapPageModalFrom = () => {
 
     return (
         <ModalBlock>
-            <OpenButton TextColor={theme.TextColor} onClick={open}>
+            <OpenButton modalHover={theme.modalHover} TextColor={theme.TextColor} onClick={open}>
                 <div style={{ display: "flex", alignItems: "center" }}>
                     <TokenLogo src={AtomLogo} />
                     <TokenName TextColor={theme.TextColor}>ATOM</TokenName>

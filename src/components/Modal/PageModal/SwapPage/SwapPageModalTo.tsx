@@ -55,7 +55,7 @@ const OpenButton = styled.button <{ TextColor: string }>`
     font-weight: 600;
     padding: 0;
     white-space: nowrap;
-    margin-right: 20px;
+    margin-right: 30px;
     display: flex;
     align-items: center;
     color: ${props => props.TextColor};

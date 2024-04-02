@@ -6,10 +6,10 @@ import { useToggleTheme } from "../../../hooks/useToggleTheme";
 const LinkText = (Link)
 const LinkBLock = styled(LinkText)`
     text-decoration: none;
-    font-weight: 700;
+    font-weight: 400;
     outline: none;
     font-size: 15px;
-    margin-top: 10px;
+    margin-top: 20px;
     @media (max-width: 1110px) {
         font-size: 15px;
     }

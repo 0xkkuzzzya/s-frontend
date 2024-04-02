@@ -1,11 +1,11 @@
 import styled from "styled-components";
 
 const Button = styled.div`
-    width: 30px;
+    width: 35px;
     height: 14px;
-    font-size: 8px;
+    font-size: 9px;
     font-weight: 700;
-    color: #000;
+    color: #222;
     border-radius: 5px;
     display: flex;
     justify-content: center;
@@ -13,14 +13,14 @@ const Button = styled.div`
     padding: 0;
     cursor: pointer;
     background: linear-gradient(to right, #6db8ff, #38a3ff);
-    margin-right: 20px;
+    margin-right: 30px;
 `
 
 
 export const SwapPageMAXButton = () => {
     return(
         <Button>
-            MAX
+            Max
         </Button>
     )
 }
