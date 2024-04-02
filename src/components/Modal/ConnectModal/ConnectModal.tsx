@@ -46,14 +46,14 @@ const OpenButton = styled.button <{color: string, border: string, margin: string
     border: ${props => props.border};
     outline: none;
     cursor: pointer;
-    border-radius: 10px;
+    border-radius: 20px;
     font-family: 'Metropolis', sans-serif;
     font-size: 15px;
     font-weight: 600;
     padding: 10px 20px;
     white-space: nowrap;
     margin-top: ${props => props.margin};
-    color: #222;
+    color: #fff;
     @media (max-width: 500px) {
         font-size: 15px;
     }
@@ -186,7 +186,7 @@ export const ConnectModal = () => {
         color={connectWallet.connected == true ? 'transparent' : BackgroundConnectButton} 
         border={connectWallet.connected == true ? '2px solid #6CBBFF' : 'none' }
         margin={connectWallet.connected == true ? '-5px' : '-1px' }>
-            {walletAddr == "" || undefined ? "Connect Wallet" : <ConnectBlock TextColor={theme.TextColor}>  <LogoKeplr src={KeplrLogo}/>  {walletAddr} </ConnectBlock>}
+            {walletAddr == "" || undefined ? isDes ? "Connect Wallet" : "Connect" : <ConnectBlock TextColor={theme.TextColor}>  <LogoKeplr src={KeplrLogo}/>  {walletAddr} </ConnectBlock>}
         </OpenButton>
         <StyledDialogOvelay isOpen={walletModalStatus.b && !connectWallet.connected} onDismiss={close}>
             <StyledDialogContent modalBgColor={theme.modalBgColor} modalBorder={theme.modalBorder}>

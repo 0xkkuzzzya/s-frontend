@@ -44,14 +44,14 @@ const CloseButton = styled.button <{ TextColor: string }>`
 `
 
 const OpenButton = styled.button <{TextColor: string, modalHover: string}>`
-    background: transparent;
+    background: #222;
     border:none;
     outline: none;
     cursor: pointer;
     font-family: 'Inter', sans-serif;
     font-size: 18px;
     font-weight: 600;
-    padding: 7px 10px;
+    padding: 8px 10px;
     border-radius: 50px;
     white-space: nowrap;
     margin-right: 20px;
@@ -59,9 +59,6 @@ const OpenButton = styled.button <{TextColor: string, modalHover: string}>`
     align-items: center;
     transition: all .2s ease-in-out;
     color: ${props => props.TextColor};
-    &:hover {
-        background: ${props => props.modalHover};
-    }
 `
 
 const CloseButtonBlock = styled.div`
