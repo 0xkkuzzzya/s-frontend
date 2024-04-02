@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import { DialogContent, DialogOverlay } from '@reach/dialog';
 import { animated } from '@react-spring/web';
-import AtomLogo from '../../../../assets/svg/AtomLogo.webp'
+import AtomLogo from '../../../../assets/svg/AtomLogo.png'
 import loop from '../../../../assets/svg/loop.svg'
 import { useToggleTheme } from "../../../../hooks/useToggleTheme";
 import { useShowModalSwapFrom } from "../../../../hooks/useShowModal";
@@ -116,8 +116,8 @@ const SearchToken = styled.input`
 `
 
 const TokenLogo = styled.img`
-    width: 35px;
-    height: 35px;  
+    width: 30px;
+    height: 30px;  
 `
 
 const TokenName = styled.a <{ TextColor: string }>`

@@ -116,8 +116,8 @@ const SearchToken = styled.input`
 `
 
 const TokenLogo = styled.img`
-    width: 35px;
-    height: 35px; 
+    width: 30px;
+    height: 30px; 
     border-radius: 50px;
 `
 
