@@ -28,6 +28,7 @@ const SoonText = styled.a`
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     margin-top: -70px;
+    font-weight: 700;
 `
 
 
