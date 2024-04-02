@@ -15,7 +15,7 @@ const Container = styled.div <{backgroundColor: string}>`
 `
 
 const PageContainer = styled.div`
-    height: calc(100vh - 80px);
+    height: calc(-80px + 100vh);
     display: flex;
     justify-content: center;
 `
