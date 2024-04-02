@@ -15,6 +15,7 @@ const Container = styled.div`
     align-items: center;
     @media (max-width: 500px) {
         width: 90%;
+        margin-top: 35px;
     }
 `
 
