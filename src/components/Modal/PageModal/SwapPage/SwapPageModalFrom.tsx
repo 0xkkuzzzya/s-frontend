@@ -43,8 +43,8 @@ const CloseButton = styled.button <{ TextColor: string }>`
     outline: none;
 `
 
-const OpenButton = styled.button <{TextColor: string, modalHover: string}>`
-    background: #222;
+const OpenButton = styled.button <{TextColor: string, modalHover: string, OpenButtonBg: string}>`
+    background: ${props => props.OpenButtonBg};
     border:none;
     outline: none;
     cursor: pointer;
@@ -57,7 +57,6 @@ const OpenButton = styled.button <{TextColor: string, modalHover: string}>`
     margin-right: 20px;
     display: flex;
     align-items: center;
-    transition: all .2s ease-in-out;
     color: ${props => props.TextColor};
 `
 
@@ -197,7 +196,7 @@ export const SwapPageModalFrom = () => {
 
     return (
         <ModalBlock>
-            <OpenButton modalHover={theme.modalHover} TextColor={theme.TextColor} onClick={open}>
+            <OpenButton OpenButtonBg={theme.OpenButtonBg} modalHover={theme.modalHover} TextColor={theme.TextColor} onClick={open}>
                 <div style={{ display: "flex", alignItems: "center" }}>
                     <TokenLogo src={AtomLogo} />
                     <TokenName TextColor={theme.TextColor}>ATOM</TokenName>

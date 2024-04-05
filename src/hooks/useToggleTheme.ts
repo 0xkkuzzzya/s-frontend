@@ -7,6 +7,8 @@ interface Theme {
   button: string;
   TextColor: string;
   FieldColor: string;
+  FieldBg: string;
+  OpenButtonBg: string;
   BorderField: string;
   modalBgColor: string;
   modalBorder: string;
@@ -31,6 +33,8 @@ export const ThemeWhiteState: Theme = {
     button: 'linear-gradient(to right, rgb(119, 191, 249), rgb(45, 150, 255))',
     TextColor: 'black',
     FieldColor: '#1a1a1a',
+    FieldBg: '#f9f9f9',
+    OpenButtonBg: '#fff',
     BorderField: '1px solid #EEEEEE',
     modalBgColor: 'rgb(245,245,245)',
     modalBorder: '2px solid #dbdbdb',
@@ -43,7 +47,7 @@ export const ThemeWhiteState: Theme = {
     walletHover: '#ECECEC',
     navBlockBg: '#ECEBEB',
     ModalHoverColor: '#ECECEC',
-    ToField: '#efefef',
+    ToField: '#f9f9f9',
     SwapButton: "#fff",
     modalHover: '#ECECEC',
 };
@@ -55,6 +59,8 @@ export const ThemeBlackState: Theme = {
   button: 'linear-gradient(to right, rgb(119, 191, 249), rgb(45, 150, 255))',
   TextColor: 'white',
   FieldColor: '#1a1a1a',
+  FieldBg: 'transparent',
+  OpenButtonBg: '#222',
   BorderField: '1px solid #2b2b2d',
   modalBgColor: '#282828',
   modalBorder: '2px solid #333',

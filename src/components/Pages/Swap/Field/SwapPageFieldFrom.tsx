@@ -4,7 +4,7 @@ import { SwapPageModalFrom } from "../../../Modal/PageModal/SwapPage/SwapPageMod
 import { SwapPageInput } from "./SwapPageInput";
 import { useToggleTheme } from "../../../../hooks/useToggleTheme";
 
-const Field = styled.div <{BorderField: string}>`
+const Field = styled.div <{BorderField: string, FieldBg: string}>`
     width: 100%;
     height: 120px;
     border: ${props => props.BorderField};
@@ -13,6 +13,7 @@ const Field = styled.div <{BorderField: string}>`
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    background: ${props => props.FieldBg};
 `
 
 const Avaible = styled.div`
@@ -53,7 +54,7 @@ export const SwapPageFieldFrom = () => {
     const [theme, setTheme] = useToggleTheme()
 
     return(
-        <Field BorderField={theme.BorderField}>
+        <Field FieldBg={theme.FieldBg} BorderField={theme.BorderField}>
             <Container>
                 <SwapPageInput/>
                 <SwapPageModalFrom/>

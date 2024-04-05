@@ -27,7 +27,7 @@ export const SwapPageFieldTo = () => {
     const [theme, setTheme] = useToggleTheme()
 
     return(
-        <Field BorderField={theme.BorderField} ToField={theme.ToField}>
+        <Field ToField={theme.ToField} BorderField={theme.BorderField}>
             <AmountOut>0</AmountOut>
             <SwapPageModalTo/>
         </Field>
