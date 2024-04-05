@@ -184,6 +184,7 @@ const TokenContrainer = styled.div`
     align-items: center;
     justify-content: space-between;
     margin-top: 10px;
+    cursor: pointer;
 `
 
 
