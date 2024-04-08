@@ -44,10 +44,10 @@ const CloseButton = styled.button <{ TextColor: string }>`
 `
 
 const OpenButton = styled.button`
-    width: 90%;
+    width: 100%;
     height: 50px;
-    font-size: 16px;
-    font-weight: 700;
+    font-size: 18px;
+    font-weight: 600;
     background: linear-gradient(to left, #3B9CFC, #6CBBFF);
     border: none;
     margin: 0 auto;
