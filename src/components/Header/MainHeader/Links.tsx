@@ -41,7 +41,6 @@ const LinkBlock = styled.div`
 `
 
 const MobLinkBlock = styled.div`
-    width: 150px;
     display: flex;
     outline: none;
     border-radius: 10px;
@@ -63,6 +62,7 @@ const MobBlockLink = styled.nav`
     transition: max-height .3s ease-in-out;
     justify-content: center;
     align-items: center;
+    gap: 25px;
 `
 
 const LinkMobBlock = styled.div`
@@ -83,6 +83,7 @@ const WalletLogo = styled.svg <{ icon: string }>`
     background: url(${props => props.icon});
     background-repeat: no-repeat;
     background-size: contain;
+    margin-left: 5px;
 `
 
 
