@@ -2,12 +2,11 @@ import styled from "styled-components";
 import { MainHeaderLink } from "./CustomLink";
 import { useAccordionStore } from "../../../hooks/useAccordionStore";
 import { useToggleTheme } from "../../../hooks/useToggleTheme";
-import myLogo from '../../../assets/svg/WalletLogo.svg'
-import earnLogo from '../../../assets/svg/EarnLogo.svg'
-import borrowLogo from '../../../assets/svg/BorrowLogo.svg'
-import myBlackLogo from '../../../assets/svg/myBlackLogo.svg'
-import earnBlackLogo from '../../../assets/svg/earnBlackLogo.svg'
-import borrowBlackLogo from '../../../assets/svg/borrowBlackLogo.svg'
+import SwapLogo from '../../../assets/svg/SwapLogo.svg'
+import FuturesLogo from '../../../assets/svg/FuturesLogo.svg'
+import Orderbook from '../../../assets/svg/Orderbook.svg'
+import PoolsLogo from '../../../assets/svg/PoolsLogo.svg'
+import DepositLogo from '../../../assets/svg/DepositLogo.svg'
 
 
 const BlockLink = styled.nav`
@@ -78,8 +77,8 @@ const LinkMobBlock = styled.div`
 `
 
 const WalletLogo = styled.svg <{ icon: string }>`
-    width: 25px;
-    height: 25px;
+    width: 30px;
+    height: 30px;
     background: url(${props => props.icon});
     background-repeat: no-repeat;
     background-size: contain;
@@ -121,31 +120,31 @@ export const MobileLink = () => {
                 <MobBlockLink>
                     <MobLinkBlock>
                         <MainHeaderLink to="/">
-                            <WalletLogo icon={theme.active == true ? myBlackLogo : myLogo}></WalletLogo>
+                            <WalletLogo icon={SwapLogo}></WalletLogo>
                             Swap
                         </MainHeaderLink>
                     </MobLinkBlock>
                     <MobLinkBlock>
                         <MainHeaderLink to="/futures">
-                            <WalletLogo icon={theme.active == true ? earnBlackLogo : earnLogo}></WalletLogo>
+                            <WalletLogo icon={FuturesLogo}></WalletLogo>
                             Futures
                         </MainHeaderLink>
                     </MobLinkBlock>
                     <MobLinkBlock>
                         <MainHeaderLink to="/orderbook">
-                            <WalletLogo icon={theme.active == true ? borrowBlackLogo : borrowLogo}></WalletLogo>
+                            <WalletLogo icon={Orderbook}></WalletLogo>
                             Orderbook
                         </MainHeaderLink>
                     </MobLinkBlock>
                     <MobLinkBlock>
                         <MainHeaderLink to="/pools">
-                            <WalletLogo icon={theme.active == true ? borrowBlackLogo : borrowLogo}></WalletLogo>
+                            <WalletLogo icon={PoolsLogo}></WalletLogo>
                             Pools
                         </MainHeaderLink>
                     </MobLinkBlock>
                     <MobLinkBlock>
                         <MainHeaderLink to="/deposit">
-                            <WalletLogo icon={theme.active == true ? borrowBlackLogo : borrowLogo}></WalletLogo>
+                            <WalletLogo icon={DepositLogo}></WalletLogo>
                             Deposit
                         </MainHeaderLink>
                     </MobLinkBlock>

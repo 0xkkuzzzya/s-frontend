@@ -11,6 +11,8 @@ const LinkBLock = styled(LinkText)`
     font-size: 15px;
     padding: 10px 20px;
     text-align: center;
+    display: flex;
+    align-items: center;
     @media (max-width: 1110px) {
         font-size: 15px;
         display: flex;
