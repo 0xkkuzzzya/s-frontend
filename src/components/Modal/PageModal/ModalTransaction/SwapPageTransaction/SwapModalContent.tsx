@@ -85,8 +85,8 @@ export const SwapModalContent = () => {
 
     const [theme, setTheme] = useToggleTheme();
 
-    return(
-        <Container>
+    const Content =
+        <>
             <Block>
                 <TextBlock>
                     <Text TextColor={theme.TextColor}>You give</Text>
@@ -112,10 +112,22 @@ export const SwapModalContent = () => {
                         <AmountToken TextColor={theme.TextColor}>1100</AmountToken>
                     </AmountBlock>
                 </Field>
-                <GradientBlock/>
-                <SwapModalInfo/>
-                <SwapPageConfirm/>
+                <GradientBlock />
+                <SwapModalInfo />
+                <SwapPageConfirm />
             </Block>
+        </>
+
+    const Error =
+        <>
+            <Block>
+                
+            </Block>
+        </>
+
+    return (
+        <Container>
+            {Content}
         </Container>
     )
 }
